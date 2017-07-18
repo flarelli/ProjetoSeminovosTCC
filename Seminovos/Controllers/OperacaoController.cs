@@ -6,15 +6,15 @@ using System.Web.Mvc;
 
 namespace Seminovos.Controllers
 {
-    public class HomeController : Controller
+    public class OperacaoController : Controller
     {
         [Authorize]
-        public ActionResult Index()
+        public ActionResult Especulacoes()
         {
             return View();
         }
         [Authorize]
-        public ActionResult Sobre()
+        public ActionResult CadastrarContrato()
         {
             return View();
         }

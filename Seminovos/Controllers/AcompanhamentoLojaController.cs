@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace Seminovos.Controllers
 {
-    public class HomeController : Controller
+    public class AcompanhamentoLojaController : Controller
     {
         [Authorize]
-        public ActionResult Index()
-        {
-            return View();
-        }
-        [Authorize]
-        public ActionResult Sobre()
+        public ActionResult AcompanhamentoLoja()
         {
             return View();
         }
