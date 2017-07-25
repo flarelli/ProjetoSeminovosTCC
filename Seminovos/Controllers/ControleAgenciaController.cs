@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace Seminovos.Controllers
 {
-    public class AcompanhamentoLojaController : Controller
+    public class ControleAgenciaController : Controller
     {
         [Authorize]
-        public ActionResult AcompanhamentoLoja()
+        public ActionResult ControleAgencia()
         {
             return View();
         }

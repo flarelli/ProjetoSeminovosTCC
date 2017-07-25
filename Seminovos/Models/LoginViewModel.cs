@@ -8,11 +8,11 @@ namespace Seminovos.Models
 {
     public class LoginViewModel
     {
-        [Required(ErrorMessage ="Informe o usuário")]
+        [Required(ErrorMessage ="O campo usuário é obrigatório!")]
         [Display(Name="Usuário")]
         public string Usuario { get; set; }
 
-        [Required(ErrorMessage = "Informe a senha")]
+        [Required(ErrorMessage = "O campo senha é obrigatório!")]
         [DataType(DataType.Password)]
         [Display(Name = "Senha")]
         public string Senha { get; set; }

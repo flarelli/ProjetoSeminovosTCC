@@ -48,22 +48,24 @@
                             <li>@Html.ActionLink("Cadastrar Contrato", "CadastrarContrato", "Operacao")</li>
                         </ul>
                     </li>
+                    <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Gerenciar Loja
+                        Controle Agência
                         <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Gerenciar Loja", "AcompanhamentoLoja", "AcompanhamentoLoja")</li>
+                            <li>@Html.ActionLink("Controle Agência", "ControleAgencia", "ControleAgencia")</li>
                         </ul>
-                </ul>    
-                <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
-                    <li><a href="#">Olá @User.Identity.Name</a></li>
-                    @using (Html.BeginForm("LogOff", "Conta", FormMethod.Post, new { id = "logoffForm" }))
-                    {
-                        <li><a href="javascript:document.getElementById('logoffForm').submit()">Sair</a></li>
-                    }
-                </ul>
+                    </li>
+                </ul>   
+                using (Html.BeginForm("LogOff", "Conta", FormMethod.Post, new { id = "logoffForm" }))
+                {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
+                            <li><a href="#">Olá @User.Identity.Name !</a></li>
+                            <li><a href="javascript:document.getElementById('logoffForm').submit()">Sair</a></li>                
+                        </ul>
+                }
                 }
                 else
                 {
