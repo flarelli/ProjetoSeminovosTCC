@@ -15,7 +15,7 @@ namespace Seminovos.Models
 
             using (var conexao = new SqlConnection())
             {
-                conexao.ConnectionString = "Data Source=localhost; Inicial Catalog=seminovos;User Id=adm;Password=123";
+                conexao.ConnectionString = "Data Source=localhost; Inicial Catalog=sndb;User Id=admin;Password=123";
                 conexao.Open();
 
 
