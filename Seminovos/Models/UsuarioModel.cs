@@ -15,10 +15,11 @@ namespace Seminovos.Models
 
             using (var conexao = new SqlConnection())
             {
-                conexao.ConnectionString = "Data Source=localhost; Inicial Catalog=sndb;User Id=admin;Password=123";
+                //conexão com o banco de dados para a validação do usuário do sistema
+                conexao.ConnectionString = @"Data Source=.\SQLEXPRESS; Initial Catalog=sndb;User Id=admin;Password=123";
                 conexao.Open();
 
-
+                //realiza a execução da query e valida se o valor informado bate com o cadastrado
                 using (var comando = new SqlCommand())
                 {
                     comando.Connection = conexao;

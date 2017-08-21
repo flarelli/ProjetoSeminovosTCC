@@ -1,43 +1,50 @@
-﻿@model List<Seminovos.Models.CadastroProduto>
-@{ 
-    ViewBag.Title = "Cadastro de Produtos";
+﻿@model List<Seminovos.Models.CadastroModelo>
+@{
+    ViewBag.Title = "Cadastro Modelos Veículos";
 }
 <div id="cadastro">
     <section id="cadastro_cabecalho">
         <h1>@ViewBag.Title</h1>
-        </section>
+    </section>
     <section id="cadastro_conteudo">
         <div class="row">
             <div class="col-md-12">
                 <div class="box">
                     <div id="cabecalho_grid" class="row">
-                        <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i>Incluir</a>
+                        <div class="col-md-12">
+                            <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i>Incluir</a>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <table id="grid-cadastro" class="table table-bordered table-striped table-hover">
                                 <thead>
-                                <tr>
-                                    <th>Placa</th>
-                                    <th>Modelo</th>
-                                    <th>Situação</th>
-                                    <th>Ação</th>
-                                </tr>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Descrição Modelo</th>
+                                        <th>Ano Modelo</th>
+                                        <th>Ano Fabricação</th>
+                                        <th>Cor</th>
+                                        <th>Situação</th>
+                                        <th>Ação</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
                                         <tr>
-                                            <td>@item.Placa</td>
-                                            <td>@item.Modelo</td>
-                                            <td>@item.SituacaoCarro</td>
+                                            <td>@item.Codigo</td>
+                                            <td>@item.DescricaoModelo</td>
+                                            <td>@item.AnoModelo</td>
+                                            <td>@item.AnoFabricacao</td>
+                                            <td>@item.CorModelo</td>
+                                            <td>@{var situacaomodelo = (item.SituacaoModelo ? "Sim" : "Não");}@situacaomodelo</td>
                                             <td>
                                                 <a class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar </a>
                                                 <a class="btn btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i> Excluir </a>
                                             </td>
                                         </tr>
                                     }
-                                    
                                 </tbody>
                             </table>
                         </div>
@@ -47,4 +54,5 @@
         </div>
     </section>
 </div>
+
 
