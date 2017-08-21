@@ -2,16 +2,41 @@
 @{ 
     ViewBag.Title = "Cadastro de Produtos";
 }
+<style>
+    #grid-cadastro > thead > tr th:nth-child(2) {
+        width: 300px;
+    }
+
+    #grid-cadastro > thead > tr th:nth-child(3) {
+        width: 300px;
+    }
+
+    #cadastro {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #cadastro_cabecalho {
+        border-bottom: 1px #dddddd solid;
+    }
+
+    #cadastro_conteudo {
+        margin-top: 20px;
+    }
+
+    #cabecalho_grid {
+        margin-bottom: 20px;
+    }
+</style>
 <div id="cadastro">
     <section id="cadastro_cabecalho">
         <h1>@ViewBag.Title</h1>
         </section>
     <section id="cadastro_conteudo">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="box">
                     <div id="cabecalho_grid" class="row">
-                        <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i>Incluir</a>
+                        <div class="col-md-12">
+                            <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i>Incluir</a>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -42,9 +67,6 @@
                             </table>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
     </section>
 </div>
 
